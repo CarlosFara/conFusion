@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing/routes';
 import { HomeComponent } from './home/home.component';
@@ -12,7 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { MatCardModule, MatGridListModule, MatListModule, MatToolbarModule, MatDialogModule } from '@angular/material';
+import { MatCardModule, MatGridListModule, MatListModule, MatToolbarModule, MatDialogModule, MatSlideToggleModule, MatSelectModule } from '@angular/material';
 import { APP_BASE_HREF } from '@angular/common';
 
 describe('AppComponent', () => {
@@ -27,7 +27,10 @@ describe('AppComponent', () => {
         MatGridListModule,
         MatListModule,
         MatToolbarModule,
-        MatDialogModule
+        MatDialogModule,
+        MatSlideToggleModule,
+        MatSelectModule,
+        ReactiveFormsModule
       ],
       declarations: [
         AppComponent,

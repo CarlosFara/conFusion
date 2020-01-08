@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuComponent } from './menu.component';
-import { MatGridListModule, MatCardModule, MatListModule } from '@angular/material';
+import { MatGridListModule, MatCardModule, MatListModule, MatSlideToggleModule, MatSelectModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { HomeComponent } from '../home/home.component';
@@ -9,6 +9,7 @@ import { DishdetailComponent } from '../dishdetail/dishdetail.component';
 import { ContactComponent } from '../contact/contact.component';
 import { AboutComponent } from '../about/about.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
@@ -21,7 +22,10 @@ describe('MenuComponent', () => {
         RouterModule,
         AppRoutingModule,
         MatCardModule,
-        MatListModule
+        MatListModule,
+        ReactiveFormsModule,
+        MatSlideToggleModule,
+        MatSelectModule
       ],
       declarations: [
         MenuComponent,
