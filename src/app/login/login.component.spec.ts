@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
+import { MatToolbarModule, MatDialogModule, MatFormFieldModule, MatCheckboxModule, MatDialogRef, MatInputModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -8,9 +11,19 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      imports: [
+        MatToolbarModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatInputModule,
+        BrowserAnimationsModule
+      ],
+      declarations: [LoginComponent],
+      providers: [{ provide: MatDialogRef, useValue: {} }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
