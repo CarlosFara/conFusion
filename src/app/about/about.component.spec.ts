@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
-import { MatCardModule, MatListModule } from '@angular/material';
+import { MatCardModule, MatListModule, MatProgressSpinnerModule } from '@angular/material';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -11,7 +11,8 @@ describe('AboutComponent', () => {
     TestBed.configureTestingModule({
       imports:[
         MatCardModule,
-        MatListModule
+        MatListModule,
+        MatProgressSpinnerModule
       ],
       declarations: [ AboutComponent ]
     })

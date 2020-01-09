@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DishdetailComponent } from './dishdetail.component';
-import { MatCardModule, MatListModule, MatDialogModule, MatGridListModule, MatSelectModule, MatSlideToggleModule } from '@angular/material';
+import { MatCardModule, MatListModule, MatDialogModule, MatGridListModule, MatSelectModule, MatSlideToggleModule, MatProgressSpinnerModule } from '@angular/material';
 import { DishService } from '../services/dish.service';
 import { APP_BASE_HREF } from '@angular/common';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
@@ -25,7 +25,8 @@ describe('DishdetailComponent', () => {
         AppRoutingModule,
         ReactiveFormsModule,
         MatSelectModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatProgressSpinnerModule
       ],
       declarations: [ 
         DishdetailComponent,

@@ -26,19 +26,17 @@
       <h1 matLine> Comments</h1>
       <p matLine>
         <mat-list-item *ngFor="let comments of dish.comments">
-          <p matLine>
-            <span>{{comments.comment}}</span>
-          </p>
-          <p matLine>
-            <span>{{comments.rating}} Stars</span>
-          </p>
-          <p matLine>
-            <span>-- {{comments.author}} </span>
-            <span>{{comments.date | date}}</span>
-          </p>
+          <p matLine>{{comments.comment}}</p>
+          <p matLine>{{comments.rating}} Stars</p>
+          <p matLine>-- {{comments.author}} {{comments.date | date}}</p>
         </mat-list-item>
       </p>
     </mat-list>
+  </div>
+
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner>
+    <h4>Loading . . . Please Wait</h4>
   </div>
 
 </div>

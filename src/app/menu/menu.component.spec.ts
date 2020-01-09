@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MenuComponent } from './menu.component';
-import { MatGridListModule, MatCardModule, MatListModule, MatSlideToggleModule, MatSelectModule } from '@angular/material';
+import { MatGridListModule, MatCardModule, MatListModule, MatSlideToggleModule, MatSelectModule, MatProgressSpinnerModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { HomeComponent } from '../home/home.component';
@@ -25,7 +25,8 @@ describe('MenuComponent', () => {
         MatListModule,
         ReactiveFormsModule,
         MatSlideToggleModule,
-        MatSelectModule
+        MatSelectModule,
+        MatProgressSpinnerModule
       ],
       declarations: [
         MenuComponent,
