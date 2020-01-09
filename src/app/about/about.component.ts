@@ -12,10 +12,11 @@ export class AboutComponent implements OnInit {
   leaders: Leader[];
   selectedLeader: Leader;
 
-  constructor(private dishService: LeaderService) { }
+  constructor(private leaderService: LeaderService) { }
 
   ngOnInit() {
-    this.leaders = this.dishService.getLeaders();
+    this.leaderService.getLeaders()
+      .then((leaderList) => this.leaders = leaderList);
   }
 
   // onSelect(leader:Leader){
