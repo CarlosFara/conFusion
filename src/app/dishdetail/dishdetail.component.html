@@ -37,7 +37,38 @@
           <p matLine>-- {{comments.author}} {{comments.date | date}}</p>
         </mat-list-item>
       </p>
+      <p matLine>
+        <mat-list-item *ngIf="commentForm.valid">
+          <p matLine>{{commentForm.value.comment}}</p>
+          <p matLine>{{commentForm.value.rating}} Stars</p>
+          <p matLine>-- {{commentForm.value.author}} </p>
+        </mat-list-item>
+      </p>
+
+      <form novalidate [formGroup]="commentForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+        <!-- CSS class for mat-form-field -->
+        <!-- .full-width { width: 85% } -->
+        <p>
+          <mat-form-field class="full-width">
+            <input matInput formControlName="author" placeholder="Name" type="text">
+            <mat-error *ngIf="formErrors.author"> {{formErrors.author}} </mat-error>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-slider formControlName="rating" [max]="max" [min]="min" thumbLabel tickInterval="1">
+          </mat-slider>
+        </p>
+        <p>
+          <mat-form-field class="full-width">
+            <textarea matInput formControlName="comment" placeholder="Your Comment" rows=12></textarea>
+            <mat-error *ngIf="formErrors.comment"> {{formErrors.comment}} </mat-error>
+          </mat-form-field>
+        </p>
+          <button type="submit" mat-button class="background-primary text-floral-white"
+            [disabled]="commentForm.invalid">Submit</button>
+      </form>
     </mat-list>
+
   </div>
 
   <div [hidden]="dish">
