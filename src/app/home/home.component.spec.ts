@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
 import { MatCardModule, MatProgressSpinnerModule } from '@angular/material';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { baseURL } from '../shared/baseurl';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,9 +13,13 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       imports:[
         MatCardModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        HttpClientTestingModule
       ],
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      providers: [
+        { provide: 'BaseURL', useValue: baseURL }
+      ]
     })
     .compileComponents();
   }));

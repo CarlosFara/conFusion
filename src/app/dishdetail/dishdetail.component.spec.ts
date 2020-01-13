@@ -10,6 +10,8 @@ import { MenuComponent } from '../menu/menu.component';
 import { ContactComponent } from '../contact/contact.component';
 import { AboutComponent } from '../about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { baseURL } from '../shared/baseurl';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('DishdetailComponent', () => {
   let component: DishdetailComponent;
@@ -27,7 +29,8 @@ describe('DishdetailComponent', () => {
         MatSelectModule,
         MatSlideToggleModule,
         MatProgressSpinnerModule,
-        MatSliderModule
+        MatSliderModule,
+        HttpClientTestingModule
       ],
       declarations: [ 
         DishdetailComponent,
@@ -38,7 +41,8 @@ describe('DishdetailComponent', () => {
       ],
       providers: [
         DishService,
-        { provide: APP_BASE_HREF, useValue : '/' }
+        { provide: APP_BASE_HREF, useValue : '/' },
+        { provide: 'BaseURL', useValue: baseURL }
       ],
     })
     .compileComponents();
