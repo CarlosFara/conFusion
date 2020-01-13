@@ -10,6 +10,7 @@ import { DishService } from '../services/dish.service'
 export class MenuComponent implements OnInit {
 
   dishes: Dish[];
+  errMsg: string;
 
   constructor(private dishService: DishService,
     @Inject('BaseURL') private BaseURL) { }
@@ -17,7 +18,8 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.dishService.getDishes()
       //(dishes) is the object coming when the promise resolve
-      .subscribe((dishes) => this.dishes = dishes);
+      .subscribe((dishes) => this.dishes = dishes,
+        errMsg => this.errMsg = <any>errMsg);
   }
 
   // onSelect(dish:Dish){

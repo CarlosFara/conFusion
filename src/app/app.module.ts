@@ -33,6 +33,7 @@ import { baseURL } from './shared/baseurl';
 
 //Others
 import 'hammerjs';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import 'hammerjs';
     DishService,
     PromotionService,
     LeaderService,
+    ProcessHTTPMsgService,
     { provide: 'BaseURL', useValue: baseURL }
   ],
   entryComponents:[
