@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContactComponent } from './contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule, MatSlideToggleModule, MatSelectModule, MatInputModule } from '@angular/material';
+import { MatFormFieldModule, MatSlideToggleModule, MatSelectModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { baseURL } from '../shared/baseurl';
@@ -20,7 +20,8 @@ describe('ContactComponent', () => {
         MatSelectModule,
         MatInputModule,
         BrowserAnimationsModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        MatProgressSpinnerModule
       ],
       declarations: [ContactComponent],
       providers: [{ provide: 'baseURL', useValue: baseURL }]
