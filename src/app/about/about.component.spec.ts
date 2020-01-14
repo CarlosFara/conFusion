@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
 import { MatCardModule, MatListModule, MatProgressSpinnerModule } from '@angular/material';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -12,7 +13,8 @@ describe('AboutComponent', () => {
       imports:[
         MatCardModule,
         MatListModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        NoopAnimationsModule
       ],
       declarations: [ AboutComponent ]
     })

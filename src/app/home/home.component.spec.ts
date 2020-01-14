@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { MatCardModule, MatProgressSpinnerModule } from '@angular/material';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { baseURL } from '../shared/baseurl';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -14,7 +15,8 @@ describe('HomeComponent', () => {
       imports:[
         MatCardModule,
         MatProgressSpinnerModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        NoopAnimationsModule
       ],
       declarations: [ HomeComponent ],
       providers: [

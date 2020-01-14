@@ -12,6 +12,7 @@ import { AboutComponent } from '../about/about.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { baseURL } from '../shared/baseurl';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('DishdetailComponent', () => {
   let component: DishdetailComponent;
@@ -30,7 +31,8 @@ describe('DishdetailComponent', () => {
         MatSlideToggleModule,
         MatProgressSpinnerModule,
         MatSliderModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        NoopAnimationsModule
       ],
       declarations: [ 
         DishdetailComponent,
