@@ -82,4 +82,9 @@
         [disabled]="feedbackForm.invalid">Submit</button>
     </form>
   </div>
+  <div fxFlex *ngIf="errMsg">
+    <h2>Error</h2>
+    <h4>{{errMsg}}</h4>
+  </div>
+
 </div>

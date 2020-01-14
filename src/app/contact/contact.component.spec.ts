@@ -4,6 +4,8 @@ import { ContactComponent } from './contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule, MatSlideToggleModule, MatSelectModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { baseURL } from '../shared/baseurl';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -11,17 +13,19 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports:[
+      imports: [
         ReactiveFormsModule,
         MatFormFieldModule,
         MatSlideToggleModule,
         MatSelectModule,
         MatInputModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        HttpClientTestingModule
       ],
-      declarations: [ ContactComponent ]
+      declarations: [ContactComponent],
+      providers: [{ provide: 'baseURL', useValue: baseURL }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
