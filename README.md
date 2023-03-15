@@ -1,6 +1,7 @@
 # ConFusion
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
+node v12.22.12 with npm 6.14.16
 
 ## Development server
 
@@ -26,6 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Runninig json-server to view the entire App
+## Running json-server to view the entire App
 
-[Setting up a Server using json-server](https://www.coursera.org/learn/angular/supplement/L8FjJ/exercise-instructions-setting-up-a-server-using-json-server).
+[Setting up a Server using json-server](https://www.npmjs.com/package/json-server).
+Aclaración: Toda la aplicación está cofigurada para levantar los datos desde el servidor (imagenes incluidas).
