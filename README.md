@@ -31,3 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [Setting up a Server using json-server](https://www.npmjs.com/package/json-server).
 Aclaración: Toda la aplicación está cofigurada para levantar los datos desde el servidor (imagenes incluidas).
+
+## Error en font-awesome
+
+Simplemente hay que agregarle 'calc' a las líneas problematicas, por ejemplo --> width: calc(18em / 14);
