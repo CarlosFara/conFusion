@@ -1,7 +1,8 @@
 # ConFusion
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
-node v12.22.12 with npm 6.14.16
+
+node v14.21.3 with npm 6.14.18
 
 ## Development server
 
