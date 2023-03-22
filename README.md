@@ -31,6 +31,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Running json-server to view the entire App
 
 [Setting up a Server using json-server](https://www.npmjs.com/package/json-server).
+
+json-server --watch db.json
+
 Aclaración: Toda la aplicación está cofigurada para levantar los datos desde el servidor (imagenes incluidas).
 
 ## Error en font-awesome
