@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   feedbackForm: FormGroup;
   feedback: Feedback;
   contactType = ContactType;
-  @ViewChild('fform') feedbackFormDirective;
+  @ViewChild('fform', { static: true }) feedbackFormDirective;
   showConfirm: boolean;
   errMsg: string;
 
