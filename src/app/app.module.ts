@@ -12,7 +12,6 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, MatSelectModule, MatSlideToggleModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
 
 //Components
 import { AppComponent } from './app.component';
@@ -29,7 +28,7 @@ import { LoginComponent } from './login/login.component';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
-import { baseURL } from './shared/baseurl';
+import { baseURL } from './shared/baseurl'; //TODO: Esto me parece que se podría borrar por que ya no se usa.
 
 //Others
 import 'hammerjs';
@@ -70,7 +69,6 @@ import { HighlightDirective } from './directives/highlight.directive';
     MatProgressSpinnerModule,
     MatSliderModule,
     HttpClientModule,
-    HttpModule
   ],
   providers: [
     DishService,
