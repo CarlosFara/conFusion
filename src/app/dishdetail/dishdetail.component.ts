@@ -25,7 +25,7 @@ export class DishdetailComponent implements OnInit {
   prev: string;
   next: string;
   errMsg: string;
-  @ViewChild('cform', { static: false }) commentFormDirective;
+  @ViewChild('cform') commentFormDirective;
   commentForm: FormGroup;
   comment: Comment;
 
