@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Dish } from '../shared/dish';
 import { DishService } from '../services/dish.service';
-import { DISHES } from '../shared/dishes';
+import DISHES from '../shared/dishes.json';
 import { baseURL } from '../shared/baseurl';
 import { Observable, of } from 'rxjs';
 import { By } from '@angular/platform-browser';
@@ -21,9 +21,7 @@ describe('MenuComponent', () => {
   beforeEach(async(() => {
 
     const dishServiceStub = {
-      getDishes: function (): Observable<Dish[]> {
-        return of(DISHES);
-      }
+      getDishes: function (): Observable<Dish[]> { return of(DISHES) }
     };
 
     // En mi ejemplo tengo muchisimos imports más que sin ellos no anda...
