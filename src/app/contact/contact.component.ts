@@ -111,7 +111,19 @@ export class ContactComponent implements OnInit {
           () => { this.feedback = null; this.showConfirm = false; }, 5 * 1000);
       },
         errMsg => this.errMsg = <any>errMsg);
+        
+      this.resetForm()
+  }
 
+  retry() {
+    console.log('reseteando formulario')
+    this.feedback = null
+    this.showConfirm = false
+    this.errMsg = null
+    this.resetForm()
+  }
+
+  private resetForm() {
     this.feedbackFormDirective.resetForm();
     this.feedbackForm.reset({
       firstname: '',
@@ -122,7 +134,6 @@ export class ContactComponent implements OnInit {
       contacttype: 'None',
       message: ''
     });
-
   }
 
 }

@@ -99,6 +99,7 @@
   <div fxFlex *ngIf="errMsg">
     <h2>Error</h2>
     <h4>{{errMsg}}</h4>
+    <button (click)="retry()" mat-button class="background-primary text-floral-white">Retry</button>
   </div>
 
 </div>
