@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DishdetailComponent } from './dishdetail.component';
 import { DishService } from '../services/dish.service';
@@ -25,7 +25,7 @@ describe('DishdetailComponent', () => {
   let component: DishdetailComponent;
   let fixture: ComponentFixture<DishdetailComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports:[
         MatCardModule,
