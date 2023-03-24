@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as packageJSON from '../../../package.json'
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
   constructor() { }
 
-  ngOnInit() {
-  }
+  angularVersion: string;
 
+  ngOnInit() {
+    const PKG = packageJSON.dependencies['@angular/core']
+    this.angularVersion = `v${PKG.replace(/[\^~]/g, '')}`
+  }
 }
