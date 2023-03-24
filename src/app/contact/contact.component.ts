@@ -22,6 +22,8 @@ export class ContactComponent implements OnInit {
   @ViewChild('fform', { static: true }) feedbackFormDirective;
   showConfirm: boolean;
   errMsg: string;
+  callingService: boolean = false
+  private feedbackAux: Feedback = new Feedback()
 
   formErrors = {
     'firstname': '',
@@ -99,40 +101,42 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     this.feedback = this.feedbackForm.value;
-    console.log(this.feedback);
+    this.callingService = true
 
     this.feedbackService.submitFeedback(this.feedback)
-      .subscribe(feedback => {
-        this.feedback = feedback;
+      .subscribe(response => {
+        this.feedback = response
+        this.feedbackAux = null
+        this.callingService = false
         this.showConfirm = true;
         this.errMsg = null;
         console.log(this.feedback + 'POST OK');
+        this.resetForm()
         setTimeout(
-          () => { this.feedback = null; this.showConfirm = false; }, 5 * 1000);
+          () => { this.feedback = null; this.showConfirm = false; },
+          3 * 1000
+        );
       },
-        errMsg => this.errMsg = <any>errMsg);
-        
-      this.resetForm()
+      errMsg => {this.callingService = false; this.errMsg = <any>errMsg})
   }
 
   retry() {
-    console.log('reseteando formulario')
+    Object.assign(this.feedbackAux, this.feedback)
     this.feedback = null
-    this.showConfirm = false
     this.errMsg = null
-    this.resetForm()
+    this.resetForm(this.feedbackAux)
   }
 
-  private resetForm() {
+  private resetForm(form?: Feedback) {
     this.feedbackFormDirective.resetForm();
     this.feedbackForm.reset({
-      firstname: '',
-      lastname: '',
-      telnum: 0,
-      email: '',
-      agree: false,
-      contacttype: 'None',
-      message: ''
+      firstname: form?.firstname ?? '',
+      lastname: form?.lastname ?? '',
+      telnum: form?.telnum ?? '',
+      email: form?.email ?? '',
+      agree: form?.agree ?? false,
+      contacttype: form?.contacttype ?? 'None',
+      message: form?.message ?? ''
     });
   }
 

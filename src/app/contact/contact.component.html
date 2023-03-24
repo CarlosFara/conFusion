@@ -92,7 +92,7 @@
     <p>How?: {{feedback.contacttype }}</p>
     <p>Feedback: {{feedback.message }}</p>
   </div>
-  <div *ngIf="feedback && !showConfirm" [@expand]>
+  <div *ngIf="callingService" [@expand]>
     <h4>Submitting Form...</h4>
     <mat-spinner></mat-spinner>
   </div>
