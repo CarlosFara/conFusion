@@ -39,9 +39,6 @@ describe('MenuComponent', () => {
       ]
     })
       .compileComponents();
-
-    const dishservice = TestBed.get(DishService);
-
   }));
 
   beforeEach(() => {

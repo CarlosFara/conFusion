@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HeaderComponent } from './header.component';
-import { MatToolbarModule, MatDialogModule } from '@angular/material';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
