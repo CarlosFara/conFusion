@@ -38,7 +38,6 @@ import { LeaderService } from './services/leader.service';
 import { baseURL } from './shared/baseurl'; //TODO: Esto me parece que se podría borrar por que ya no se usa.
 
 //Others
-import 'hammerjs';
 import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { HighlightDirective } from './directives/highlight.directive';
 
