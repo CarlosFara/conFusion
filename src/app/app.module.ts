@@ -42,50 +42,47 @@ import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MenuComponent,
-    DishdetailComponent,
-    HeaderComponent,
-    FooterComponent,
-    AboutComponent,
-    HomeComponent,
-    ContactComponent,
-    LoginComponent,
-    HighlightDirective
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
-    MatToolbarModule,
-    MatListModule,
-    MatGridListModule,
-    MatCardModule,
-    MatButtonModule,
-    AppRoutingModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCheckboxModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatSlideToggleModule,
-    MatProgressSpinnerModule,
-    MatSliderModule,
-    HttpClientModule,
-  ],
-  providers: [
-    DishService,
-    PromotionService,
-    LeaderService,
-    ProcessHTTPMsgService,
-    { provide: 'BaseURL', useValue: baseURL }
-  ],
-  entryComponents:[
-    LoginComponent
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MenuComponent,
+        DishdetailComponent,
+        HeaderComponent,
+        FooterComponent,
+        AboutComponent,
+        HomeComponent,
+        ContactComponent,
+        LoginComponent,
+        HighlightDirective
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        MatToolbarModule,
+        MatListModule,
+        MatGridListModule,
+        MatCardModule,
+        MatButtonModule,
+        AppRoutingModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCheckboxModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSelectModule,
+        MatSlideToggleModule,
+        MatProgressSpinnerModule,
+        MatSliderModule,
+        HttpClientModule,
+    ],
+    providers: [
+        DishService,
+        PromotionService,
+        LeaderService,
+        ProcessHTTPMsgService,
+        { provide: 'BaseURL', useValue: baseURL }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
