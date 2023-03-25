@@ -1,6 +1,9 @@
 name: Build and Deploy
 on:
   workflow_dispatch:
+ # push:
+ #   branches:
+ #     - master
 
 jobs:
   build-and-deploy:
@@ -25,9 +28,3 @@ jobs:
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist/conFusion # The folder the action should deploy.
-
-    permissions:
-      actions: write
-      contents: read
-      pull-requests: write
-      issues: write
