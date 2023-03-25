@@ -15,7 +15,7 @@ describe('DishService', () => {
   }));
 
   it('should be created', () => {
-    const service: DishService = TestBed.get(DishService);
+    const service: DishService = TestBed.inject(DishService);
     expect(service).toBeTruthy();
   });
 });

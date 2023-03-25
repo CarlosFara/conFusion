@@ -92,13 +92,14 @@
     <p>How?: {{feedback.contacttype }}</p>
     <p>Feedback: {{feedback.message }}</p>
   </div>
-  <div *ngIf="feedback && !showConfirm" [@expand]>
+  <div *ngIf="callingService" [@expand]>
     <h4>Submitting Form...</h4>
     <mat-spinner></mat-spinner>
   </div>
   <div fxFlex *ngIf="errMsg">
     <h2>Error</h2>
     <h4>{{errMsg}}</h4>
+    <button (click)="retry()" mat-button class="background-primary text-floral-white">Retry</button>
   </div>
 
 </div>

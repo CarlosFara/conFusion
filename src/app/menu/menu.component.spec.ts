@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MenuComponent } from './menu.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Dish } from '../shared/dish';
 import { DishService } from '../services/dish.service';
-import { DISHES } from '../shared/dishes';
+import DISHES from '../shared/dishes.json';
 import { baseURL } from '../shared/baseurl';
 import { Observable, of } from 'rxjs';
 import { By } from '@angular/platform-browser';
@@ -18,12 +18,10 @@ describe('MenuComponent', () => {
   let component: MenuComponent;
   let fixture: ComponentFixture<MenuComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
 
     const dishServiceStub = {
-      getDishes: function (): Observable<Dish[]> {
-        return of(DISHES);
-      }
+      getDishes: function (): Observable<Dish[]> { return of(DISHES) }
     };
 
     // En mi ejemplo tengo muchisimos imports más que sin ellos no anda...
@@ -41,9 +39,6 @@ describe('MenuComponent', () => {
       ]
     })
       .compileComponents();
-
-    const dishservice = TestBed.get(DishService);
-
   }));
 
   beforeEach(() => {

@@ -11,7 +11,7 @@ describe('LeaderService', () => {
   }));
 
   it('should be created', () => {
-    const service: LeaderService = TestBed.get(LeaderService);
+    const service: LeaderService = TestBed.inject(LeaderService);
     expect(service).toBeTruthy();
   });
 });

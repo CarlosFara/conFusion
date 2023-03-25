@@ -11,7 +11,7 @@ describe('FeedbackService', () => {
   }));
 
   it('should be created', () => {
-    const service: FeedbackService = TestBed.get(FeedbackService);
+    const service: FeedbackService = TestBed.inject(FeedbackService);
     expect(service).toBeTruthy();
   });
 });
