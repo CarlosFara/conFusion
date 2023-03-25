@@ -25,7 +25,7 @@ You can get help migrating between Angular versions at [Angular Update Guide](ht
 Run `json-server --watch db.json` for a dev json-server
 ([Setting up a Server using json-server](https://www.npmjs.com/package/json-server)).
 
-Aclaración: Toda la aplicación está cofigurada para levantar los datos desde el servidor (imagenes incluidas).
+**Aclaración:** The entire app is configured to retrieve data from the server (images included).
 
 ## Error en font-awesome
 Simplemente hay que agregarle 'calc' a las líneas problematicas, por ejemplo --> width: calc(18em / 14);
