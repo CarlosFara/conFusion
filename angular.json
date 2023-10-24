@@ -61,6 +61,14 @@
             }
           }
         },
+        "github-pages": {
+          "builder": "@angular-devkit/build-angular:github-pages",
+          "options": {
+            "outputPath": "dist/conFusion",
+            "baseHref": "/conFusion/",
+            "index": "src/index.html"
+          }
+        },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
